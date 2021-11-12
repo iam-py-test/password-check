@@ -22,6 +22,14 @@ baseurl = "https://raw.githubusercontent.com/iam-py-test/password-check/main/"
 def expand_url(path):
 	return baseurl + path
 
+def gen_test_pass():
+	words = ["password","security","secure","account","s","let","me","in","hello","google"]
+	pw = ""
+	for len in range(0,random.choice([1,4])):
+		pw += random.choice(words)
+	return pw
+
+
 # get the passwords and words
 words = requests.get(expand_url("data/words.txt")).text.split("\n")
 worstPass = requests.get(expand_url("data/worst_password.txt")).text.split("\n")
@@ -34,4 +42,5 @@ if upw[id] in worstPass:
 	print("Your password is in the list of worst passwords\nIt is recommended you change it")
 else:
 	print("Your password is not in the list of worst passwords\nHowever, you still should enable Multi Factor Authentication on all accounts and not reuse your password across accounts")
-
+print(gen_test_pass())
+print(gen_test_pass())
