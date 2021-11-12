@@ -29,6 +29,7 @@ def gen_test_pass():
 		pw += random.choice(words)
 	return pw
 def guess_pass(pw):
+	print(pw)
 	for try1 in range(len(pw)):
 		gtp = gen_test_pass()
 		print(gtp)
