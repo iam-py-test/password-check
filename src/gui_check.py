@@ -43,8 +43,9 @@ words = requests.get(expand_url("data/words.txt")).text.split("\n")
 worstPass = requests.get(expand_url("data/worst_password.txt")).text.split("\n")
 
 
-passwd = ttk.Entry(root, textvariable=userP, show="*")
-button = ttk.Button(root, text='Check', command=check_p)
+passwd = ttk.Entry(root, textvariable=userP, show="*").grid()
+button = ttk.Button(root, text='Check', command=check_p).grid()
 
+root.title("Check your password")
 root.mainloop()
 
