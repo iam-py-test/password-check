@@ -22,9 +22,8 @@ except:
 	from tkinter import ttk
 	from tkinter import messagebox
 
-# store the user's password
-userP = StringVar("")
-id = random.choice(["1","2","3"]) # I have no idea if this actually improves security
+root = Tk()
+userP = StringVar()
 
 # when you fork, be sure to change this
 baseurl = "https://raw.githubusercontent.com/iam-py-test/password-check/main/"
@@ -44,7 +43,6 @@ words = requests.get(expand_url("data/words.txt")).text.split("\n")
 worstPass = requests.get(expand_url("data/worst_password.txt")).text.split("\n")
 
 
-root = Tk()
 passwd = ttk.Entry(root, textvariable=userP, show="*")
 button = ttk.Button(root, text='Check', command=check_p)
 
