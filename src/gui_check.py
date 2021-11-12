@@ -33,9 +33,9 @@ def check_p():
 	passwd = userP.get()
 	# check if it is in the worst passwords
 	if passwd in worstPass:
-		print("Your password is in the list of worst passwords\nIt is recommended you change it")
+		messagebox.showinfo(title="Password check result",message="Your password is in the list of worst passwords\nIt is recommended you change it")
 	else:
-		print("Your password is not in the list of worst passwords\nHowever, you still should enable Multi Factor Authentication on all accounts and not reuse your password across accounts")
+		messagebox.showinfo(title="Password check result",message="Your password is not in the list of worst passwords\nHowever, you still should enable Multi Factor Authentication on all accounts and not reuse your password across accounts")
 
 
 # get the passwords and words
