@@ -4,13 +4,11 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
-      - name: Build
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
       - run: pip install pyinstaller
       - run: pyinstaller --onefile src\gui_check.py
       - run: dir
-      - name: Upload
       - uses: actions/upload-artifact@master
         with:
           name: "gui_check.exe"
