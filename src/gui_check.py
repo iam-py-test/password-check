@@ -36,6 +36,7 @@ def check_p():
 words = requests.get(expand_url("data/words.txt")).text.split("\n")
 worstPass = requests.get(expand_url("data/worst_password.txt")).text.split("\n")
 
+root.geometry("300x300")
 
 passwd = ttk.Entry(root, textvariable=userP, show="*").grid()
 button = ttk.Button(root, text='Check', command=check_p).grid()
