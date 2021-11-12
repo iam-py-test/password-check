@@ -14,13 +14,7 @@ try:
 	from tkinter import ttk
 	from tkinter import messagebox
 except:
-	import subprocess
-	subprocess.run([sys.executable,"-m pip install requests"])
-	subprocess.run([sys.executable,"-m pip install tkinter"])
-	import requests
-	from tkinter import *
-	from tkinter import ttk
-	from tkinter import messagebox
+	pass
 
 root = Tk()
 userP = StringVar()
