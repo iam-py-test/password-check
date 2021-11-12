@@ -7,7 +7,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
       - run: pip install pyinstaller
-      - run: pyinstaller --onefile src\gui_check.py
+      - run: pyinstaller --distpath . --onefile src\gui_check.py
       - run: dir
       - uses: actions/upload-artifact@master
         with:
