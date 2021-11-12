@@ -8,10 +8,9 @@ jobs:
       - uses: actions/setup-python@v2
       - run: pip install pyinstaller
       - run: pyinstaller --onefile src\gui_check.py
-      - name: Commit & Push
-        uses: actions-x/commit@v2
+      - run: dir
+      - name: Upload
+      - uses: actions/upload-artifact@master
         with:
-            email: iam-py-test@github.com
-            name: Update bot
-            branch: main
-            message: Update the compiled version
+          name: "gui_check.exe"
+          path: "gui_check.exe"
