@@ -23,11 +23,16 @@ def expand_url(path):
 	return baseurl + path
 
 def gen_test_pass():
-	words = ["password","security","secure","account","s","let","me","in","hello","google"]
+	words = ["password","security","secure","account","s","let","me","in","hello","google","yahoo","gmail","give","tree","trump","check","login","log","in","sign"]
 	pw = ""
 	for len in range(0,random.choice([1,4])):
 		pw += random.choice(words)
 	return pw
+def guess_pass(pw):
+	for try1 in range(len(pw)):
+		if gen_test_pass() == pw:
+			return True
+	return gen_test_pass() == pw
 
 
 # get the passwords and words
@@ -42,5 +47,9 @@ if upw[id] in worstPass:
 	print("Your password is in the list of worst passwords\nIt is recommended you change it")
 else:
 	print("Your password is not in the list of worst passwords\nHowever, you still should enable Multi Factor Authentication on all accounts and not reuse your password across accounts")
-print(gen_test_pass())
-print(gen_test_pass())
+
+if guess_pass(upw[id]) == True:
+	print("Your password was guessed")
+else:
+	print("Your password was not guessed")
+
