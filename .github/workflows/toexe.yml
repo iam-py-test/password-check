@@ -9,10 +9,10 @@ jobs:
       - run: pip install pyinstaller
       - run: cd src
       - run: pyinstaller --onefile gui_check.py
-    - name: Commit & Push
-      uses: actions-x/commit@v2
-      with:
-          email: iam-py-test@github.com
-          name: Update bot
-          branch: main
-          message: Update the compiled version
+      - name: Commit & Push
+        uses: actions-x/commit@v2
+        with:
+            email: iam-py-test@github.com
+            name: Update bot
+            branch: main
+            message: Update the compiled version
