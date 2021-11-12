@@ -23,7 +23,7 @@ except:
 	from tkinter import messagebox
 
 # store the user's password
-upw = {}
+upw = StringVar()
 id = random.choice(["1","2","3"]) # I have no idea if this actually improves security
 
 # when you fork, be sure to change this
@@ -43,8 +43,6 @@ def check_p():
 words = requests.get(expand_url("data/words.txt")).text.split("\n")
 worstPass = requests.get(expand_url("data/worst_password.txt")).text.split("\n")
 
-# get the user's password
-upw = StringVar()
 
 root = Tk()
 passwd = ttk.Entry(root, textvariable=upw, show="*")
