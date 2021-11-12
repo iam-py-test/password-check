@@ -34,6 +34,11 @@ def guess_pass(pw):
 		print(gtp)
 		if gtp == pw:
 			return True
+	for try1 in range(random.choice([1,5,6,10])):
+		gtp = gen_test_pass()
+		print(gtp)
+		if gtp == pw:
+			return True
 	return gen_test_pass() == pw
 
 
