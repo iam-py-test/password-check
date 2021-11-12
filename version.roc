@@ -1,3 +1,6 @@
+VS_VERSION_INFO, VERSIONINFO
+    FILEVERSION    1,0,0,0
+    PRODUCTVERSION 1,0,0,0
 {
     BLOCK "StringFileInfo"
     {
