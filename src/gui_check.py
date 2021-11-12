@@ -23,7 +23,7 @@ except:
 	from tkinter import messagebox
 
 # store the user's password
-userP = StringVar()
+userP = StringVar("")
 id = random.choice(["1","2","3"]) # I have no idea if this actually improves security
 
 # when you fork, be sure to change this
