@@ -39,7 +39,7 @@ worstPass = requests.get(expand_url("data/worst_password.txt")).text.split("\n")
 root.geometry("100x300")
 
 passwd = ttk.Entry(root, textvariable=userP, show="*").pack()
-button = ttk.Button(root, text='Check', command=check_p).p()
+button = ttk.Button(root, text='Check', command=check_p).pack()
 
 root.title("Check your password")
 root.mainloop()
