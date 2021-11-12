@@ -8,7 +8,6 @@ jobs:
       - uses: actions/setup-python@v2
       - run: pip install pyinstaller
       - run: pip install requests
-      - run: pip install tkinter
       - run: pyinstaller --distpath . --onefile src\gui_check.py
       - run: dir
       - name: Create Pull Request
