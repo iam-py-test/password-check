@@ -36,10 +36,10 @@ def check_p():
 words = requests.get(expand_url("data/words.txt")).text.split("\n")
 worstPass = requests.get(expand_url("data/worst_password.txt")).text.split("\n")
 
-root.geometry("300x300")
+root.geometry("100x300")
 
 passwd = ttk.Entry(root, textvariable=userP, show="*").pack()
-button = ttk.Button(root, text='Check', command=check_p).pack()
+button = ttk.Button(root, text='Check', command=check_p).p()
 
 root.title("Check your password")
 root.mainloop()
