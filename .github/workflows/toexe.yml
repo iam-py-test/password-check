@@ -9,7 +9,7 @@ jobs:
       - run: pip install pyinstaller
       - run: pyinstaller --distpath . --onefile src\gui_check.py
       - run: dir
-      - uses: actions/upload-artifact@master
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
         with:
-          name: "gui_check.exe"
-          path: "gui_check.exe"
+          author: Bot <bot@iam-py-test.github.io>
