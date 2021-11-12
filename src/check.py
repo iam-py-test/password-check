@@ -30,7 +30,9 @@ def gen_test_pass():
 	return pw
 def guess_pass(pw):
 	for try1 in range(len(pw)):
-		if gen_test_pass() == pw:
+		gtp = gen_test_pass()
+		print(gtp)
+		if gtp == pw:
 			return True
 	return gen_test_pass() == pw
 
