@@ -9,5 +9,9 @@ document.getElementById("check").addEventListener("click",async function(){
   else{
     document.getElementById("isinbad").textContent = "Your password is not in the list of worst passwords"
   }
+  pw[randID] = null
+  delete pw[randID]
+  pw = {}
+  randID = 0
 })
 
