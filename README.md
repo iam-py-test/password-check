@@ -1,5 +1,9 @@
 # password-check
 Because everyone's password is just 'password'
+
+### Note:
+Password-check is changing to a web-based tool at https://iam-py-test.github.io/password-check/website
+
 ### About password-check
 _password-check_ is a Python tool to get the strength of a password
 ### Use
